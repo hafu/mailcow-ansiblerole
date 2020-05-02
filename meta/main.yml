@@ -9,6 +9,9 @@ galaxy_info:
       versions:
         - xenial
         - bionic
+    - name: ArchLinux
+      versions:
+        - any
   galaxy_tags:
     - mailcow
     - mailserver
