@@ -1,12 +1,5 @@
 ---
 
-- name: install python-pip
-  become: yes
-  package:
-    name: python-pip
-    state: present
-  when: ansible_os_family|lower == "archlinux"
-
 - name: install python3-pip
   become: yes
   package:
@@ -26,6 +19,7 @@
   pip:
     name: docker
     state: present
+  when: ansible_os_family|lower == "debian"
 
 - name: Check if mailcow installation directory exists
   become: yes
