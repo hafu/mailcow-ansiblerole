@@ -1,11 +1,9 @@
 ---
 
-- name: install python-pip and python-netaddr
+- name: install python-pip
   become: yes
   package:
-    name:
-      - python-pip
-      - python-netaddr
+    name: python-pip
     state: present
   when: ansible_os_family|lower == "archlinux"
 
